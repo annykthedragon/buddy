@@ -1,5 +1,5 @@
 # buddy
-a web application designed to help users make up their minds about what to do in their leisure time
+## *a web application designed to help users make up their minds about what to do in their leisure time*
 
 Как описать современного человека? Коммуникабельный, рациональный, здраво оценивающий свои способности, умеющий беречь своё время времени.
 
