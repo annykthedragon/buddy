@@ -1,0 +1,568 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+/* Шапка сайта, фон и заголовок */
+body {
+	margin: 10;
+	padding:70px;
+	width: 85%;
+	height: 100vh;
+  font-family: 'Comfortaa';
+	color: #fff;
+	background: linear-gradient(-45deg, #30170a, #400406, #a58de0, #114e8f, #82c4a3, #02081a, #3d804e);
+	background-size: 400% 400%;
+	animation: gradientBG 50s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+
+}
+
+figure {
+  text-align: center;
+}
+
+ h1 {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #eee;
+	font-weight: 100;
+}
+h2, h3, h5 {
+	margin: 0;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #eee;
+	font-weight: 100;
+	width: 100%;
+}
+  h4 {
+	font-size: 20px;
+	text-align: justify;
+	margin: 0;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #eee;
+	font-weight: 100;
+	width: 100%;
+}
+
+a,
+a:hover {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+	text-decoration: none;
+	color: #a58de0;
+}
+header{
+  padding:10px;
+  background:#09c;
+  position:relative;
+}
+header h1{
+  display:inline-block;
+  margin:0 0 0 0px;
+  color:#fff;
+	font-family: , sans-serif;
+  line-height:50px;
+}
+
+h1 {
+  font-weight: 500;
+  color: #fff;
+  align-self: flex-start;
+  margin: 0 0 auto 0;
+  font-size: 4.5rem;
+  line-height: 1;
+  opacity: 0;
+}
+
+
+h1 + p {
+  font-family: 'segoe ui',sans-serif, "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: auto;
+  align-self: flex-end;
+  text-transform: uppercase;
+  transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.3s;
+  -webkit-transform: translate3d(-20%, 0, 0);
+          transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+  font-weight: 500;
+  color: #fff;
+  padding-right: 8rem;
+}
+p.paragraph {
+  margin: 0;
+  font-family: 'segoe ui',sans-serif;
+	color: #fff;
+	  width: 80%;
+	  max-width: 550px;
+	  text-align: justify;
+	  font-size: 1.2rem;
+	  font-weight: 500;
+	  opacity: 0;
+	  transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s;
+	  transform: translate3d(-20%, 0, 0);
+}
+
+/* Меню */
+* {
+	transition: all 0.2s;
+}
+.menu-link {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 10px rgba(255, 255, 255, .3);
+}
+.menu-link span {
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: #000;
+	top: 50%;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -10px;
+}
+.menu-link span:nth-child(1) {
+	transform: translateY(-6px);
+}
+.menu-link span:nth-child(3) {
+	transform: translateY(6px);
+}
+.menu-link:hover {
+	cursor: pointer;
+}
+.menu-link:hover span:nth-child(3) {
+	transform-origin: 0% 0%;
+	transform: translateY(6px) rotate(-33deg);
+	width: 10px;
+	margin-left: 0;
+}
+.menu-link:hover span:nth-child(1) {
+	transform-origin: 0% 0%;
+	transform: translateY(-6px) rotate(31deg);
+	width: 12px;
+	margin-left: 0;
+}
+
+menu {
+	position: fixed;
+	width: 50%;
+	height: 100vh;
+	background-color: #000;	/*!!!*/
+  opacity:0.95;
+	left: 0;
+	margin: 0;
+	top: 0;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateX(-100%);
+}
+.active-menu {
+	transform: translateX(-20%);
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 3;
+}
+li a {
+	font-size: 2rem;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+.close-btn {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	font-size: 3rem;
+	transition: all 0.2s;
+	transform-origin: 50% 53%;
+	display: block;
+	line-height: 3rem;
+	text-align: center;
+	width: 3rem;
+	height: 3rem;
+}
+.close-btn:hover {
+	transform: rotate(180deg);
+}
+
+/*================= Содержимое страницы ======================================*/
+
+
+
+/*Разные размеры экрана*/
+
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 3.9rem;
+  }
+  h1 span:not(.emphasis) {
+    font-size: 2.9rem;
+  }
+  h1 + p {
+    font-size: 13px;
+  }
+  p.paragraph {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+	input,label{
+		display:block;
+	}
+	nav ul{
+		position:absolute;
+		top:100%;
+		left:0;
+		width:100%;
+		opacity:0;
+		visibility:hidden;
+	}
+	input.navicon:checked~ul{
+		opacity:1;
+		visibility:visible;
+	}
+	nav ul li{
+		float:none;
+		text-align:center;
+		background:#05c;
+	}
+}
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h1 span:not(.emphasis) {
+    font-size: 2.5rem;
+  }
+  p.paragraph {
+    max-width: 90%;
+  }
+	h1 {
+    font-size: 2.5rem;
+  }
+	input,label{
+		display:block;
+	}
+	nav ul{
+		position:absolute;
+		top:100%;
+		left:0;
+		width:100%;
+		opacity:0;
+		visibility:hidden;
+	}
+	input.navicon:checked~ul{
+		opacity:1;
+		visibility:visible;
+	}
+	nav ul li{
+		float:none;
+		text-align:center;
+		background:#05c;
+	}
+}
+@media screen and (max-width: 600px) {
+  #home-slider{
+    height: 86vh;
+    width: 96vw;
+  }
+  h1{
+    font-size: 1.7rem;
+    align-self: justify;
+  }
+	h2{
+		font-size: 1.0rem;
+		align-self: justify;
+	}
+  h1 span:not(.emphasis) {
+    font-size: 1.1rem;
+  }
+  p.paragraph {
+    max-width: 105%;
+		font-size: 1.4rem;
+		align-self: justify;
+  }
+}
+
+/*Форма*/
+
+/*form styles*/
+body {
+font-family: 'Comfortaa';
+}
+/*form styles*/
+#msform { /*меняет прогресс бар*/
+	width: 600px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+
+/*inputs*/
+#msform input, #msform textarea, #msform select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: #2C3E50;
+	font-family: 'Comfortaa';
+	font-size: 20px;
+}
+
+
+/*buttons*/
+#msform .action-button {
+	font-family: 'Didact Gothic', sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #a58de0;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-top:-4px;
+	font-weight:700;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #483D8B;
+}
+
+
+/*headings*/
+.fs-title {
+	font-family: 'Comfortaa';
+	font-size: 65px;
+	text-transform: uppercase;
+	color: #483D8B;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 23px;
+	color: #DDA0DD;
+	margin-bottom: 20px;
+}
+
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 10px;
+	margin: 0 auto 5px auto;
+}
+
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers but it doesn't work*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+
+
+/*marking active/completed steps pink*/
+/*The number of the step and the connector before it*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #DDA0DD;
+	color: white;
+}
+/*Всплывающие окна*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Comfortaa';
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+	color: #82c4a3;/*цвет текста в попапе*/
+}
+
+#button-blue{
+	font-family: 'Didact Gothic', sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #02081a;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #3d804e;
+}
+
+.submit:hover {
+	color: #3d804e;
+}
+
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>buddy</title>
+  <link rel="stylesheet" href="./style2.css">
+  <figure>
+    <img src="logos\logo buddy.png" alt="logo">
+  </figure>
+
+  <div class="menu-link">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+	<menu>
+	<a class="close-btn" href="Offer.html">&times;</a>
+		<ul>
+      <li><a href="index.html">Главная</a></li>
+			<li><a href="Offer.html">Предложение</a></li>
+			<li><a href="Us.html">О нас</a></li>
+			<li><a href="Sponsor.html">Спонсорам</a></li>
+			<li><a href="Forum.html">Отставить отзыв</a></li>
+		</ul>
+	</menu>
+</head>
+
+<main>
+  <!-- multistep form -->
+  <form id="msform">
+
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Ресурсы</li>
+      <li>Расположение</li>
+      <li>Выбор</li>
+    </ul>
+
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Ваши ресурсы</h2>
+      <h3 class="fs-subtitle">Шаг 1</h3>
+      <div class="form-group">
+      <label class="col-md-4 control-label">Сфера интересов</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <select name="interests" class="form-control selectpicker" >
+        <option value=" " >Интересы</option>
+        <option>Кино</option>
+        <option>Вино</option>
+        <option >Выставки</option>
+        <option >Разговоры</option>
+        <option >Рейвы</option>
+        <option >Фестивали</option>
+        <option >Что подешевле</option>
+      </select>
+      </div>
+      </div>
+      </div>
+      <input type="text" name="Время" placeholder="Время" />
+      <input type="text" name="Деньги" placeholder="Деньги" />
+    <input type="button" name="next" class="next action-button" value="Дальше" />
+   </fieldset>
+
+
+   <fieldset>
+     <h2 class="fs-title">Где Вы?</h2>
+     <h3 class="fs-subtitle">Шаг 2</h3>
+     <div class="form-group">
+      <input type="text" name="Район" placeholder="Район" />
+       <label class="col-md-4 control-label">Сфера интересов</label>
+       <div class="col-md-4 selectContainer">
+       <div class="input-group">
+       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+       <select name="interests" class="form-control selectpicker" >
+         <option value=" " >Время дня</option>
+         <option>Утро</option>
+         <option>День</option>
+         <option >Вечер</option>
+         <option >Ночь</option>
+         </select>
+     </div>
+     </div>
+     </div>
+     <input type="button" name="previous" class="previous action-button" value="Назад" />
+     <input type="button" name="next" class="next action-button" value="Дальше"/>
+   </fieldset>
+
+   <fieldset>
+     <h2 class="fs-title">Вы готовы выбирать?</h2>
+     <h3 class="fs-subtitle">Шаг 3</h3>
+     <div class="form-group">
+       <label class="col-md-4 control-label">Готовность выбирать из </label>
+       <div class="col-md-4 selectContainer">
+       <div class="input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+       <select name="state" class="form-control selectpicker" >
+         <option value=" " >Сколько Вам предложить вариантов?</option>
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+       </select>
+     </div>
+     </div>
+     </div>
+    <input type="button" name="previous" class="previous action-button" value="Назад" />
+
+    <div class="button">
+    <a href="#popup1" id="button-blue"  >Предложенить</a>
+    <div class="ease"></div>
+    </div>
+    <!--<div class="button">
+      <a  href="#popup1" id="button-blue">Предложенить</a>
+      <div class="ease"></div>
+    </div>-->
+</fieldset>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Мы предлагаем:</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+        Посмторите новое Холодное Сердце.
+        </div>
+      </div>
+    </div>
+    
+  </form>
+
+</main>
+<!-- Подключаем джава скрипт (без него не работает ничего)-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+</body>
+</html>
